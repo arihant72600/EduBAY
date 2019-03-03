@@ -1,2 +1,0 @@
-# EduBAY
-EduBAY

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>edubay</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Bootstrap css -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <!-- =======================================================
+      Theme Name: eStartup
+      Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
+</head>
+
+<body>
+
+<header id="header" class="header header-hide">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <!--<h1><a href="index.html" class="scrollto"><span>edubay</span></a></h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+        </div>
+
+        <nav id="nav-menu-container" style="padding-top: 20px;">
+            <!--<ul class="nav-menu">
+                <li class="menu-active"><a href="#tutor-results">Results</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#profileModal"
+                    style="background-color: #71c55d;">
+                Profile
+            </button>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header><!-- #header -->
+
+
+<!--==========================
+  Tutor Results Section
+============================-->
+<section id="tutor-results" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+        <div class="section-title text-center">
+            <h1 class="title-style">Welcome, NAME</h1>
+            <h2 style="text-align: left; font-size: 175%;">Filter tutor results:</h2>
+            <!-- Search form -->
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div data-ng-app="searchResults" data-ng-controller="searchCtrl" style="width: 100%;">
+                <div class="col-md-6 col-lg-4" data-ng-repeat="search in searches" style="display: inline-block; float: left; padding-bottom: 30px;">
+                    <div class="feature-block profile-panel" style="text-align: left; padding: 20px;">
+                        <img src="{{search.profilePicture}}" width="100px" height="100px" style="border: 1px solid black; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;">
+                        <br>
+                        Name: {{search.name}}<br>
+                        Contact: {{search.email}}<br>
+                        Subjects: {{search.subjects}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--==========================
+  Footer
+============================-->
+<div class="copyrights" align="center">
+    <div class="container">
+        <p>Made with ❤️at Hacktech 2019!</p>
+    </div>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal fade bd-example-modal-lg" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="img/profile_image.png" width="150px" height="150px" style="border: 1px solid black; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;">
+                <br>
+                <form class="form-horizontal" id="profileForm">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="name" style="font-size: 120%;">Name:</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control input" id="name" placeholder="John Smith">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email" style="font-size: 120%;">Email:</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control input" id="email" placeholder="jsmith@example.com">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <form action="index.html" style="margin-right: auto;">
+                    <input type="submit" class="btn btn-danger" value="Log Out" />
+                </form>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/modal-video/js/modal-video.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<!-- Contact Form JavaScript File -->
+<script src="contactform/contactform.js"></script>
+
+<!-- Template Main Javascript File -->
+<script src="js/main.js"></script>
+
+<script>
+    angular.module('searchResults', []).controller('searchCtrl', function($scope) {
+        $scope.searches = [
+            {name: "John Smith", email: "jsmith@example.com", subjects: "Physics, Math, Chemistry", profilePicture: "img/profile_image.png"},
+            {name: "Kevin Yan", email: "kevinyya@usc.edu", subjects: "Coding", profilePicture: "img/profile_image.png"},
+            {name: "Clark Wang", email: "clwang@berkeley.edu", subjects: "Coding", profilePicture: "img/profile_image.png"},
+            {name: "Eric Lou", email: "erlou@stanford.edu", subjects: "Coding", profilePicture: "img/profile_image.png"},
+            {name: "Arihant Jain", email: "arihant726@ucla.edu", subjects: "Coding", profilePicture: "img/profile_image.png"}
+            ];
+    });
+</script>
+
+</body>
+</html>
